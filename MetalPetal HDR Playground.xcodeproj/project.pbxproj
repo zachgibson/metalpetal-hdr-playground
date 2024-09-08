@@ -11,6 +11,9 @@
 		3150A9DB2C8DDDFE00CDB6F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3150A9DA2C8DDDFE00CDB6F2 /* ContentView.swift */; };
 		3150A9DD2C8DDDFF00CDB6F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3150A9DC2C8DDDFF00CDB6F2 /* Assets.xcassets */; };
 		3150A9E02C8DDDFF00CDB6F2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3150A9DF2C8DDDFF00CDB6F2 /* Preview Assets.xcassets */; };
+		3150A9EA2C8DDE4400CDB6F2 /* hdr-test.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 3150A9E92C8DDE4400CDB6F2 /* hdr-test.MOV */; };
+		3150A9EF2C8E1A7F00CDB6F2 /* MetalPetal in Frameworks */ = {isa = PBXBuildFile; productRef = 3150A9EE2C8E1A7F00CDB6F2 /* MetalPetal */; };
+		3150A9F12C8E1B4400CDB6F2 /* FilteredVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3150A9F02C8E1B4400CDB6F2 /* FilteredVideoPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,8 @@
 		3150A9DA2C8DDDFE00CDB6F2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3150A9DC2C8DDDFF00CDB6F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3150A9DF2C8DDDFF00CDB6F2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3150A9E92C8DDE4400CDB6F2 /* hdr-test.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "hdr-test.MOV"; sourceTree = "<group>"; };
+		3150A9F02C8E1B4400CDB6F2 /* FilteredVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredVideoPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3150A9EF2C8E1A7F00CDB6F2 /* MetalPetal in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +57,10 @@
 		3150A9D72C8DDDFE00CDB6F2 /* MetalPetal HDR Playground */ = {
 			isa = PBXGroup;
 			children = (
+				3150A9E92C8DDE4400CDB6F2 /* hdr-test.MOV */,
 				3150A9D82C8DDDFE00CDB6F2 /* MetalPetal_HDR_PlaygroundApp.swift */,
 				3150A9DA2C8DDDFE00CDB6F2 /* ContentView.swift */,
+				3150A9F02C8E1B4400CDB6F2 /* FilteredVideoPlayer.swift */,
 				3150A9DC2C8DDDFF00CDB6F2 /* Assets.xcassets */,
 				3150A9DE2C8DDDFF00CDB6F2 /* Preview Content */,
 			);
@@ -83,6 +91,9 @@
 			dependencies = (
 			);
 			name = "MetalPetal HDR Playground";
+			packageProductDependencies = (
+				3150A9EE2C8E1A7F00CDB6F2 /* MetalPetal */,
+			);
 			productName = "MetalPetal HDR Playground";
 			productReference = 3150A9D52C8DDDFE00CDB6F2 /* MetalPetal HDR Playground.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 3150A9CC2C8DDDFE00CDB6F2;
+			packageReferences = (
+				3150A9ED2C8E1A7F00CDB6F2 /* XCRemoteSwiftPackageReference "MetalPetal" */,
+			);
 			productRefGroup = 3150A9D62C8DDDFE00CDB6F2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +141,7 @@
 			files = (
 				3150A9E02C8DDDFF00CDB6F2 /* Preview Assets.xcassets in Resources */,
 				3150A9DD2C8DDDFF00CDB6F2 /* Assets.xcassets in Resources */,
+				3150A9EA2C8DDE4400CDB6F2 /* hdr-test.MOV in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3150A9F12C8E1B4400CDB6F2 /* FilteredVideoPlayer.swift in Sources */,
 				3150A9DB2C8DDDFE00CDB6F2 /* ContentView.swift in Sources */,
 				3150A9D92C8DDDFE00CDB6F2 /* MetalPetal_HDR_PlaygroundApp.swift in Sources */,
 			);
@@ -344,6 +360,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3150A9ED2C8E1A7F00CDB6F2 /* XCRemoteSwiftPackageReference "MetalPetal" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MetalPetal/MetalPetal";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.25.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3150A9EE2C8E1A7F00CDB6F2 /* MetalPetal */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3150A9ED2C8E1A7F00CDB6F2 /* XCRemoteSwiftPackageReference "MetalPetal" */;
+			productName = MetalPetal;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3150A9CD2C8DDDFE00CDB6F2 /* Project object */;
 }
